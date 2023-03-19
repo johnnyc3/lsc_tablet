@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/fontello.css">
+    </head>
+
+    <body>
+        
+        <div class="container">
+            <div class="top-right">
+                <div class="faktura">
+                    
+                </div>
+                <div class="loadingbox">
+                    <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                </div>
+                <div class="dudlej">
+                </div>
+                <div class="navbar">
+                    <div id="statystyki_btn" onclick="statystyki()" class="btn passive"><i class="icon-user"></i>| Statystyki</div>
+                    <div id="szukajfakture_btn" onclick="szukajfakture()" class="btn passive"><i class="icon-search"></i>| Wyszukaj fakture</div>
+                    <div id="faktura_btn" onclick="wystawfakture()" class="btn passive "><i class="icon-dollar"></i>| Wystaw Fakture</div>
+                    <div onclick="wylacztablet()" id="logout" class="btn logout"><i class="icon-logout"></i>| Wyloguj się</div>
+                    <div onclick="anulujfakture()" id="anulujfakture" class="btn logout"><i class="icon-logout"></i>| Anuluj fakture</div>
+                </div>
+                <div class="menu">
+                    
+                    <div id="title">Los Santos Customs</div>
+                    <div class="powod" id="powod_faktura">Jakies tam powody</div>
+                    <div id="steamid">steamid</div>
+                    <div id="minicontainer_faktura" class="minicontainer">
+                        <div class="searchbar" id="kwota_faktura">Kwota: <div id="hajs">5000</div></div>
+                        <button onclick="zaplacfakture()" class="t_button" id="btn_faktura">Podpisz fakture</button>
+                    </div>
+
+                    <div class="niefaktura">
+                        <div class="statystyki">
+                            <div class="staty-polowa">
+                                <div class="staty-napis">Firma:</div>
+                                <div class="staty lewo">
+                                    <div  class="staty-srodek-napis">Wystawione faktury:</div>
+                                    <div id="firma-faktury" class="staty-srodek-liczba faktury-liczba">0</div>
+                                </div>
+                                <div class="staty prawo">
+                                    <div  class="staty-srodek-napis">Pieniądze z faktur:</div>
+                                    <div id="firma-kasa" class="staty-srodek-liczba kasa-liczba">0$</div>
+                                </div>
+                            </div>
+                            <div class="staty-polowa">
+                                <div class="staty-napis">Twoje:</div>
+                                <div class="staty lewo">
+                                    <div  class="staty-srodek-napis">Wystawione faktury:</div>
+                                    <div id="gracz-faktury" class="staty-srodek-liczba faktury-liczba">0</div>
+                                </div>
+                                <div class="staty prawo">
+                                    <div  class="staty-srodek-napis">Pieniądze z faktur:</div>
+                                    <div id="gracz-kasa" class="staty-srodek-liczba kasa-liczba">0$</div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <textarea id="powod" class="powod" placeholder="Wpisz wykonane usługi.." rows="10"></textarea>
+                        <div class="minicontainer">
+                            <input type='number' class="searchbar" id="kwota" placeholder="Kwota na fakturze...">
+                            <button class="t_button" id="wystawfakture_btn" onclick="wyslijfaktura()">Wystaw Fakture</button>
+                        </div>
+                        <div class="checkboxy-container">
+                            Szukaj za pomocą: 
+                            
+                            <label><input checked id="checkbox-pracownik" type="checkbox" class="radio" value="1" name="fooby[1][]" />Imie i naziwsko pracownika</label>
+                            <label><input id="checkbox-klient" type="checkbox" class="radio" value="1" name="fooby[1][]" />Imie i nazwisko klienta</label>
+                            <label><input id="checkbox-id" type="checkbox" class="radio" value="1" name="fooby[1][]" />ID faktury</label>
+                        </div>
+                        <input type="text" class="searchbar szukajfaktury_bary" id="szukajfakture_bar" placeholder="Wprowadz dane...">
+
+                        <button class="t_button" id="search_button" onclick="wyszukajwbazie_faktura()">Szukaj</button>
+
+                        <div class="lista">
+
+                        </div>
+                    </div>
+                </div>
+                <div id="footer">
+                <span id="player">XXX</span>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js" type="text/javascript"></script>
+    </body>
+    <script>
+
+  </script>
+</html>
